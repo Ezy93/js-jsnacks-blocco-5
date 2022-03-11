@@ -13,11 +13,11 @@
 
     const basketPlayer = {
         CodiceGiocatore : "",
-        Nome : Giovanni ,
-        Cognome : petruzzi,
+        Nome : "Giovanni" ,
+        Cognome : "petruzzi",
         Età : 58,
-        mediaPuntiPartita : Math.floor(math.random()* 50),
-        percSuccessPuntiTre : Math.floor(math.random()* 100),
+        mediaPuntiPartita : Math.floor( Math.random()* 50),
+        percSuccessPuntiTre : Math.floor( Math.random()* 100),
     };
 
 
@@ -25,8 +25,18 @@ const charArray = ["a" ,"b", "c","d","e", "f", "g", "h","i", "l", "m","n","o", "
 let codeChar = [];
 let codeNumber = [];
 
-    function playerCodeGenerator(charArray , pushArray){
+    function playerCodeGenerator(charArray , pushCharArray, pushIntArray){
         for(let i = 0; i < 3; i++){
-            pushArray.push(charArray[math.floor(math.random()* charArray.lengt)])
+            let randomInex = Math.floor(Math.random()* charArray.length)
+            pushCharArray.push(charArray[randomInex]);
+            pushIntArray.push(Math.floor(Math.random()* 10));
         }
+        
     }
+    playerCodeGenerator(charArray,codeChar,codeNumber);
+    
+    codeNumber.toString()
+    basketPlayer.CodiceGiocatore = codeChar.join("") + codeNumber.join("");
+
+    console.table(basketPlayer.CodiceGiocatore);
+    
