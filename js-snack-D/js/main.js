@@ -56,7 +56,7 @@
 
     let mammiferi = animal.filter((elemento) => {
         if(elemento.classe === "mammiferi"){
-            return true
+            return true  
         }
     });
     console.table(mammiferi)
