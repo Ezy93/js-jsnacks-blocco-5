@@ -8,7 +8,7 @@
 
     Infine stampa separatamente i 3 array.
 
- *
+ *      
  */
 
     const automobili = [
@@ -75,7 +75,7 @@
 
     ];
 
-
+    /* bisognava usare filter piu rapido come soluzione*/
     /* Dividi le automobili in 3 array separati: nel primo array solo le auto a benzina, nel secondo solo le auto a diesel, nel terzo il resto delle auto. */
     let benzina = [];
     let diesel = [];
