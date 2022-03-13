@@ -20,8 +20,8 @@
         percSuccessPuntiTre : Math.floor( Math.random()* 100),
     };
 
-
-const charArray = ["a" ,"b", "c","d","e", "f", "g", "h","i", "l", "m","n","o", "p", "q", "r", "s","t","u", "v","z"];
+// ? la mia soluzione
+/* const charArray = ["a" ,"b", "c","d","e", "f", "g", "h","i", "l", "m","n","o", "p", "q", "r", "s","t","u", "v","z"];
 let codeChar = [];
 let codeNumber = [];
 
@@ -38,5 +38,33 @@ let codeNumber = [];
     codeNumber.toString()
     basketPlayer.CodiceGiocatore = codeChar.join("") + codeNumber.join("");
 
-    console.table(basketPlayer.CodiceGiocatore);
+    console.table(basketPlayer.CodiceGiocatore); */
     
+
+//? correzione
+
+function charPartId(length) {
+    let result           = '';
+    let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * 
+        charactersLength));
+    }
+    return result;
+}
+
+function numericPartId(length) {
+    let result           = '';
+    let characters       = '0123456789';
+    let charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+    charactersLength));
+    }
+    return result;
+}
+
+basketPlayer.CodiceGiocatore = charPartId(3) + numericPartId(3);
+console.log(basketPlayer.CodiceGiocatore)
+
